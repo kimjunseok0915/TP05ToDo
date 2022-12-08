@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand"
+    tools:context=".IntroActivity">
+
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WNW Todo "
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:fontFamily="@font/kmi_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당신의 일정을 관리하세요"
+        android:fontFamily="@font/kmi_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tv2"
+        android:src="@drawable/intro"
+        android:layout_marginTop="16dp" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/profle"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/et_name"
+        android:layout_marginBottom="16dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/black"/>
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="당신에 이름을 입력하세요"
+        android:fontFamily="@font/kmi_bold"
+        android:textSize="12sp"
+        android:background="@drawable/bg_edit_name"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_above="@id/btn"
+        android:layout_marginBottom="24dp"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="시작하기"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"/>
+
+
+
+
+
+</RelativeLayout>

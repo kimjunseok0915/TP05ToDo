@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TodoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll"/>
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="오늘일을 내일로 미루지 마세요."
+            android:textColor="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:padding="8dp"
+            app:layout_scrollFlags="scroll"/>
+        <TextView
+            android:id="@+id/tvToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022년 09월 30일"
+            android:fontFamily="@font/kmi_bold"
+            android:textSize="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+           />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_addTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="auto"
+        app:backgroundTint="#FF3c345c"
+        app:layout_anchor="@id/appbar_parent"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_edit_note_24"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:padding="8dp"
+        android:background="@color/white"/>
+
+<!--    Bottom Sheet -->
+    <RelativeLayout
+        android:id="@+id/bs"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_bs"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:elevation="16dp">
+        <View
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:background="#FFFFFF00"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"/>
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="완료"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/btn_done">
+            <TextView
+                android:id="@+id/tv_BsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안드로이드 앱 개발"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kmi_bold"
+                android:padding="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="완료일"
+                android:textSize="12sp"
+                android:fontFamily="@font/kmi_bold"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_BsDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022년 11월 01일"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kmi_bold"
+                android:padding="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="노트"
+                android:textSize="12sp"
+                android:fontFamily="@font/kmi_bold"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:id="@+id/et_BsNote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lines="2"
+                android:background="@drawable/bg_bs_note"
+                android:hint="세부내용"
+                android:fontFamily="@font/kmi_bold"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:gravity="top"
+                android:textColor="#FF333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카테고리"
+                android:textSize="12sp"
+                android:fontFamily="@font/kmi_bold"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tv_BsCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WORK"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kmi_bold"
+                android:padding="4dp"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

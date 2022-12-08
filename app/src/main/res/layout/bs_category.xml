@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:padding="16dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="4">
+
+        <TextView
+            android:id="@+id/bsd_category_work"
+            android:text="WORK"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:background="@drawable/bg_rectangle"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/bsd_category_study"
+            android:text="STUDY"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:background="@drawable/bg_rectangle"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/bsd_category_health"
+            android:text="HEALTH"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:background="@drawable/bg_rectangle"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/bsd_category_hobby"
+            android:text="HOBBY"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:background="@drawable/bg_rectangle"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/bsd_category_meeting"
+            android:text="MEETING"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:background="@drawable/bg_rectangle"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/bsd_category_etc"
+            android:text="ETC"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kmi_bold"
+            android:background="@drawable/bg_rectangle"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+    </GridLayout>
+
+</RelativeLayout>

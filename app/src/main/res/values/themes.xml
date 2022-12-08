@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TP05ToDo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorPrimaryVariant">@color/brand</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!-- 상태표시줄의 아이콘/글씨 색상 [상태표시줄이 밝은 색임을 명시]-->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!--제목줄의 메뉴아이콘의 색상 -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+
+<!--    EditActivity만의 테마스타일    -->
+
+    <style name="EditActivityTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar"  >
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorControlNormal">@color/black</item>
+
+<!--        bottom sheet dialog style [배경색, 둥근 코너]      -->
+
+        <item name="bottomSheetDialogTheme">@style/MyBottomSheetDialogTheme</item>
+    </style>
+    <style name="MyBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MyBottomSheetStyle</item>
+
+    </style>
+
+    <style name="MyBottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="backgroundTint">@color/brand        </item>
+        <item name="shapeAppearanceOverlay">@style/MyRoundCorneredBottomSheetShape</item>
+    </style>
+
+    <style name="MyRoundCorneredBottomSheetShape">
+        <!--    배경색-->
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+    </style>
+
+
+</resources>
